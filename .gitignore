@@ -1,5 +1,6 @@
 .DS_Store
 .rebel_readline_history
+.nrepl-port
 .lein-repl-history
 .cpcache/
 target/
