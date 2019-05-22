@@ -37,8 +37,7 @@
           ::s/invalid))
       (unform* [_ cs]
         (string/join (s/unform* spec cs)))
-      (explai
-          n* [_ path via in x]
+      (explain* [_ path via in x]
         ;; TODO possibly stringify the problems
         (s/explain* spec path via in (vec x)))
       (gen* [_ overrides path rmap]
