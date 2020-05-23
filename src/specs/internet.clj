@@ -104,7 +104,7 @@
 
 (s/def ::ip-address
   (letfn [(pred [s]
-            (let [parts (string/split s #"\.")]
+            (let [parts (if (string? s) (string/split s #"\."))]
               (and (= (count parts) 4)
                    (every? (fn [part]
                              (try
