@@ -111,7 +111,7 @@
                                (let [n (edn/read-string part)]
                                  (and (integer? n)
                                       (>= 256 n 0)))
-                               (catch Exception _ false)))
+                               (catch Throwable _ false)))
                            parts))))
           (gen []
             (gen/fmap (partial string/join ".") (gen/vector (gen/choose 0 255) 4)))]
